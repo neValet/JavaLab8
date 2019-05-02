@@ -14,9 +14,8 @@ public class PressTrainingSimulator extends Simulators {
     public PressTrainingSimulator(String name, double price,
                                   int exerciseDuration, String colour,
                                   String exercise,
-                                  MusclesGroup musclesGroup,
                                   PressParts pressParts) {
-        super(name, price, exerciseDuration, colour, exercise, musclesGroup);
+        super(name, price, exerciseDuration, colour, exercise);
         this.pressParts = pressParts;
     }
 
