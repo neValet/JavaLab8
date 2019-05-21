@@ -1,7 +1,6 @@
 package ua.lviv.iot.gym2.models;
 
 import ua.lviv.iot.gym2.enums.BarbellTypes;
-import ua.lviv.iot.gym2.enums.MusclesGroup;
 
 public class Barbell extends Simulators {
 
@@ -11,9 +10,8 @@ public class Barbell extends Simulators {
     }
 
     public Barbell(String name, double price, int exerciseDuration,
-                   String colour, String exercise, MusclesGroup
-                           musclesGroup, BarbellTypes barbellTypes) {
-        super(name, price, exerciseDuration, colour, exercise, musclesGroup);
+                   String colour, String exercise, BarbellTypes barbellTypes) {
+        super(name, price, exerciseDuration, colour, exercise);
         this.barbellTypes = barbellTypes;
     }
 

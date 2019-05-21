@@ -17,31 +17,41 @@ public class Simulators {
     private int exerciseDuration;
     private String colour;
     private String exercise;
-    private MusclesGroup musclesGroup;
 
     public Simulators() {
     }
 
+    public Simulators(String name, double price) {
+        this.name = name;
+        this.price = price;
+    }
+
     public Simulators(String name, double price, int exerciseDuration,
-                      String colour, String exercise,
-                      MusclesGroup musclesGroup) {
+                      String colour, String exercise) {
         this.name = name;
         this.price = price;
         this.exerciseDuration = exerciseDuration;
         this.colour = colour;
         this.exercise = exercise;
-        this.musclesGroup = musclesGroup;
     }
 
 
     public String getHeaders() {
-        return "name, price, exerciseDuration, colour, exercise, musclesGroup";
+        return "name, price, exerciseDuration, colour, exercise";
     }
 
     public String toCSV() {
-        return getName() + ", " + getPrice() + ", " + getExerciseDuration() +
+        return getId() + ", " + getName() + ", " + getPrice() + ", " + getExerciseDuration() +
                 ", " + getColour() + ", " +
-                getExercise() + ", " + getMusclesGroup();
+                getExercise();
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -82,14 +92,6 @@ public class Simulators {
 
     public void setExercise(String exercise) {
         this.exercise = exercise;
-    }
-
-    public MusclesGroup getMusclesGroup() {
-        return musclesGroup;
-    }
-
-    public void setMusclesGroup(MusclesGroup musclesGroup) {
-        this.musclesGroup = musclesGroup;
     }
 
 }

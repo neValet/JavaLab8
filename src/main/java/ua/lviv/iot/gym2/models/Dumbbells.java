@@ -10,9 +10,8 @@ public class Dumbbells extends Simulators {
     }
 
     public Dumbbells(String name, double price, int exerciseDuration,
-                     String colour, String exercise, MusclesGroup
-                             musclesGroup, double weight) {
-        super(name, price, exerciseDuration, colour, exercise, musclesGroup);
+                     String colour, String exercise, double weight) {
+        super(name, price, exerciseDuration, colour, exercise);
         this.weight = weight;
     }
 
